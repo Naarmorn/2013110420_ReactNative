@@ -1,3 +1,4 @@
+// Ex2
 import { StyleSheet, Text, View, TextInput, Button} from 'react-native'
 import React, { useState } from 'react'
 
