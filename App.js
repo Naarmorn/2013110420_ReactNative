@@ -7,6 +7,7 @@ import Counter from './components/Counter';
 import Myinput from './components/Myinput';
 import IncrementCounter from './components/IncrementCounter';
 import Form from './components/Form';
+import Login from './components/Login';
 
 export default function App() {
   return (
@@ -18,7 +19,8 @@ export default function App() {
       {/* <Counter/> */}
       {/* <Myinput/> */}
       {/* <IncrementCounter/> */}
-      <Form/>
+      {/* <Form/> */}
+      <Login/>
     </View>
   );
 }
