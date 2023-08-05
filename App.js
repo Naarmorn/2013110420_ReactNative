@@ -11,6 +11,7 @@ import Login from './components/Login';
 import DefineStyle from './components/DefineStyle';
 import Recap from './components/Recap';
 import TouchablePractice from './components/TouchablePractice';
+import Example_useEffect from './components/Example_useEffect';
 
 export default function App() {
   return (
@@ -26,7 +27,8 @@ export default function App() {
       {/* <Login/> */}
       {/* <DefineStyle/> */}
       {/* <Recap/> */}
-      {TouchablePractice}
+      {/* {TouchablePractice} */}
+      <Example_useEffect/>
 
     </View>
   );
