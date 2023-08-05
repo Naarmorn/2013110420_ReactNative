@@ -10,6 +10,7 @@ import Form from './components/Form';
 import Login from './components/Login';
 import DefineStyle from './components/DefineStyle';
 import Recap from './components/Recap';
+import TouchablePractice from './components/TouchablePractice';
 
 export default function App() {
   return (
@@ -24,7 +25,8 @@ export default function App() {
       {/* <Form/> */}
       {/* <Login/> */}
       {/* <DefineStyle/> */}
-      <Recap/>
+      {/* <Recap/> */}
+      {TouchablePractice}
 
     </View>
   );
