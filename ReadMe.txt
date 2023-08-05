@@ -1,4 +1,4 @@
 Student ID : 2013110420
 Student Name : Naarmorn Supapsoontorn
-DateToStudy : 29-July-2023
-ClassTopic : React Hook(useState), React Native Component Part III (Cont.) >> Stylesheet, Flexbox, Button
+DateToStudy : 5-8-2023
+ClassTopic : Recap : Practice with Touchable Components, React Hook part useEffect, Example and Practice React Hook part useEffect
