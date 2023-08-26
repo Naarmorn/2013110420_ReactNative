@@ -7,6 +7,7 @@ import FlatList_Example1 from './components/FlatList_Example1'
 import FlatList_HeaderFooter from './components/FlatList_HeaderFooter'
 import FlatListAPI from './components/FlatListAPI'
 import News from './components/News'
+import ProductScreen from './components/ProductScreen'
 const App = () => {
   return (
     <View>
@@ -16,7 +17,8 @@ const App = () => {
       {/* <FlatList_Example1/> */}
       {/* <FlatList_HeaderFooter/> */}
       {/* <FlatListAPI/> */}
-      <News/>
+      {/* <News/> */}
+      <ProductScreen/>
     </View>
   )
 }
