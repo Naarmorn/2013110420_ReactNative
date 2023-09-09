@@ -1,34 +1,49 @@
-import { View, Text, Button } from "react-native";
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./components/screen/HomeScreen";
-import DetailsScreen from "./components/screen/DetailsScreen";
-import CreatePostScreen from "./components/screen/CreatePostScreen";
-import IndexScreen from "./components/screen/IndexScreen";
+import 'react-native-gesture-handler';
+import { View, Text } from 'react-native'
+import React from 'react'
+import {NavigationContainer} from '@react-navigation/native'
+import {createDrawerNavigator} from '@react-navigation/drawer'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import FirstPage from './components/pages/FirstPage';
+import SecondPage from './components/pages/SecondPage';
+
 
 const Stack = createNativeStackNavigator();
+
+function FirstSceenStack(){
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name='FirstPage' component={FirstPage}/>
+    </Stack.Navigator>
+  );
+}
+
+function SecondSceenStack(){
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name='SecondPage' component={SecondPage}/>
+    </Stack.Navigator>
+  );
+}
+
+
+const Drawer = createDrawerNavigator();
+
+function MyDrawer(){
+  return(
+    <Drawer.Navigator>
+    <Drawer.Screen name='FirstDrawer' component={FirstSceenStack}/>
+    <Drawer.Screen name='SecondDrawer' component={SecondSceenStack}/>
+    </Drawer.Navigator>
+  )
+}
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-       mode = 'model'
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#008b8b",
-          },
-          headerTintColor: "#ffff",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
-        }}
-      >
-        <Stack.Screen name="Index" component={IndexScreen} options={{title: 'MainPage'}}/>
-        <Stack.Screen name="CreatePost" component={CreatePostScreen} />
-      </Stack.Navigator>
+      <MyDrawer/>
     </NavigationContainer>
-  );
-};
+  )
+}
 
-export default App;
+export default App
