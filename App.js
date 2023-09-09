@@ -12,16 +12,36 @@ const Stack = createNativeStackNavigator();
 
 function FirstSceenStack(){
   return(
-    <Stack.Navigator>
-      <Stack.Screen name='FirstPage' component={FirstPage}/>
+    <Stack.Navigator 
+    initialRouteName="Home"
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "#ffb6c1",
+      },
+      headerTintColor: "#ffff",
+      headerTitleStyle: {
+        fontWeight: "bold",
+      },
+    }}>
+      <Stack.Screen name='FirstPage' component={FirstPage} options={{title: 'First Page'}}/>
     </Stack.Navigator>
   );
 }
 
 function SecondSceenStack(){
   return(
-    <Stack.Navigator>
-      <Stack.Screen name='SecondPage' component={SecondPage}/>
+    <Stack.Navigator
+    initialRouteName="Home"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#ffb6c1",
+          },
+          headerTintColor: "#ffff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}>
+      <Stack.Screen name='SecondPage' component={SecondPage} options={{title: 'Second Page'}}/>
     </Stack.Navigator>
   );
 }
@@ -31,7 +51,12 @@ const Drawer = createDrawerNavigator();
 
 function MyDrawer(){
   return(
-    <Drawer.Navigator>
+    <Drawer.Navigator screenOptions={{
+      drawerStyle:{
+        backgroundColor: '#ffb6c1',
+        width:240,
+      },
+    }}>
     <Drawer.Screen name='FirstDrawer' component={FirstSceenStack}/>
     <Drawer.Screen name='SecondDrawer' component={SecondSceenStack}/>
     </Drawer.Navigator>
